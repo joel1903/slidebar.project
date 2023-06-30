@@ -1,0 +1,118 @@
+/*font which is taken from google font*/
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "poppins" , sans-serif;
+  }
+  .wrapper {
+    height: 100%;
+    width: 300px;
+    position: relative;
+  }
+  #btn:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  .wrapper #slidebar{
+    position: fixed;
+    background-color: #6d4f30;
+    height: 100%;
+    width: 270px;
+    left: -270px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  #slidebar .title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 65px;
+    background-color: #6d4f30;
+    color: #F5F5F5;
+    text-align: center;
+  }
+  #slidebar .list-items {
+    position: relative;
+    border-color: #404040;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+  #slidebar .list-items li:hover {
+    box-shadow: 0 0 10px 3px #F2EAD3;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+  
+  #slidebar .list-items li {
+    padding-left: 40px;
+    line-height: 60px;
+    border-top: 1px solid rgba(255, 255, 255 , 0.1);
+    border-bottom: 1px solid #333;
+    transition: all 0.3s ease;
+  }
+  #slidebar .list-items li  a{
+    color: #DFD7BF;
+    height: 100%;
+    width: 100%;
+    font-weight: 500;
+    display: block;
+    text-decoration: none;
+  }
+  
+  #slidebar .list-items li  a i {
+    margin-right: 20px;
+  }
+  #slidebar .list-items .icons {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  #slidebar .list-items .icons a {
+    margin: 0 5px;
+    color: #DFD7BF;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #3F2305;
+    background-color: #6d4f30;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    transition: all 0.3s ease;  
+    border: 1px solid whitesmoke;
+  }
+  #slidebar .list-items .icons a:hover {
+    background-color: #4040;
+  }
+  .wrapper .menu-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: 45px;
+    width: 45px;
+    z-index: 999;
+    color: #DFD7BF;
+    background: #3F2305;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  #btn:checked ~ .menu-btn {
+    left: 247px;
+  }
+  #btn:checked ~ #slidebar {
+    left: 0px;
+  }
